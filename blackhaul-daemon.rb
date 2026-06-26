@@ -5,20 +5,20 @@
 class BlackhaulDaemon < Formula
   desc "Outbound-only file daemon for blackhaul — browse your machines from a hosted console with zero network config"
   homepage "https://github.com/zdods/blackhaul"
-  version "0.8.5"
+  version "0.8.6"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/zdods/blackhaul/releases/download/v0.8.5/blackhaul-daemon_0.8.5_darwin_amd64.tar.gz"
-      sha256 "c82edaab8c8fc528dc6b36d5257c793966229cafc3366bf38d3bf4e83306de3a"
+      url "https://github.com/zdods/blackhaul/releases/download/v0.8.6/blackhaul-daemon_0.8.6_darwin_amd64.tar.gz"
+      sha256 "4b8f0c343ed9667fc2c8679e33929b8a418815ed32cf4a9a00008c51e578e040"
 
       define_method(:install) do
         bin.install "blackhaul-daemon"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/zdods/blackhaul/releases/download/v0.8.5/blackhaul-daemon_0.8.5_darwin_arm64.tar.gz"
-      sha256 "74e8eae9bc397396e2fb5f75c20c892588c87580035f0b522ee2ba6c1fc080ef"
+      url "https://github.com/zdods/blackhaul/releases/download/v0.8.6/blackhaul-daemon_0.8.6_darwin_arm64.tar.gz"
+      sha256 "1a6b3515fac27b357ccb3618f6bd7095e5de291da6aa423f7dab2c9609bb9dda"
 
       define_method(:install) do
         bin.install "blackhaul-daemon"
@@ -28,15 +28,15 @@ class BlackhaulDaemon < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/zdods/blackhaul/releases/download/v0.8.5/blackhaul-daemon_0.8.5_linux_amd64.tar.gz"
-      sha256 "4c9b85c59c47a84c8599f322178df0e00239122b3af8ff1908bf63de3721f4e0"
+      url "https://github.com/zdods/blackhaul/releases/download/v0.8.6/blackhaul-daemon_0.8.6_linux_amd64.tar.gz"
+      sha256 "e42e52e829158dbfafd8a677f2725c48bb98adae83fbbdaee2a6a355a8575efc"
       define_method(:install) do
         bin.install "blackhaul-daemon"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/zdods/blackhaul/releases/download/v0.8.5/blackhaul-daemon_0.8.5_linux_arm64.tar.gz"
-      sha256 "284a80260a82b9e2ba1ff563f9592b82a2d2d47583229ae7005f26b95a480bc7"
+      url "https://github.com/zdods/blackhaul/releases/download/v0.8.6/blackhaul-daemon_0.8.6_linux_arm64.tar.gz"
+      sha256 "15c52a89db5e3b2fecbe5638aedec0fbef92e650a2c97334d67dc2ddccdd6f8c"
       define_method(:install) do
         bin.install "blackhaul-daemon"
       end
